@@ -1,0 +1,3 @@
+test/*          export-ignore
+.editorconfig   export-ignore
+.gitignore      export-ignore
