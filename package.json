@@ -4,8 +4,8 @@
   "description": "A simple library to transmute data into new forms.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/*.js",
-    "watch": "mocha -w ./tests/*.js"
+    "test": "mocha ./test/*.js",
+    "watch": "mocha -w ./test/*.js"
   },
   "repository": {
     "type": "git",
