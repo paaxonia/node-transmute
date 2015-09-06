@@ -1,0 +1,27 @@
+{
+  "name": "paax-transmute",
+  "version": "0.0.1",
+  "description": "A simple library to transmute data into new forms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/*.js",
+    "watch": "mocha -w ./tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/paax/node-transmute"
+  },
+  "keywords": [
+    "transform",
+    "transmute"
+  ],
+  "author": "Christoffer Palm <christoffer.palm@paax.se>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.0"
+  }
+}
