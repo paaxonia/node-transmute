@@ -4,8 +4,9 @@
   "description": "A simple library to transmute data into new forms.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/*.js",
-    "watch": "mocha -w ./test/*.js"
+    "coveralls": "istanbul cover _mocha --report lcovonly && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
+    "test": "mocha",
+    "watch": "mocha -w"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
   },
   "devDependencies": {
     "chai": "^3.2.0",
-    "mocha": "^2.3.0"
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.0",
+    "mocha-lcov-reporter": "^1.0.0"
   }
 }
