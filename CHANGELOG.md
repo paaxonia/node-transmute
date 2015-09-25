@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+##Fixed
+- Fixed the npm package name.
+
 ### Added
 - Added code coverage with coveralls.
 - Added Travis CI for automated tests.
