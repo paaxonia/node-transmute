@@ -8,7 +8,7 @@ var async = require('async');
 /**
  * Transmute library.
  */
-function Transmute () {
+function Transmute() {
 
   /**
    * Checks if supplied value is a function.
@@ -22,8 +22,12 @@ function Transmute () {
 
 	/**
 	 * Tranmute a single item.
+   *
+   * @param {object}   item       The item to transmute.
+   * @param {function} transmuter The function to handle the transmutation.
+   * @param {function} callback
 	 */
-	this.one = function(item, transmuter, callback) {
+	this.one = function (item, transmuter, callback) {
 
     if (!isFunction(transmuter)) {
       return callback(new Error('The transmuter parameter must be a function.'), null);
@@ -36,8 +40,12 @@ function Transmute () {
 
   /**
    * Tranmute a collection of items.
+   *
+   * @param {array}    collection The collection of items to transmute.
+   * @param {function} transmuter The function to handle the transmutation.
+   * @param {function} callback
    */
-	this.collection = function(collection, transmuter, callback) {
+	this.collection = function (collection, transmuter, callback) {
     var result = [];
 
     if (!isFunction(transmuter)) {
