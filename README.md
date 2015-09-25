@@ -6,9 +6,17 @@
 A simple library to transmute data into new forms.
 
 - Transmutes single items.
-- Transmutes collection of items.
+- Transmutes a collection of items.
 
-## How to use transmute.
+## Installing transmute
+
+The package is available at [npm](http://npmjs.org) and can be installed by doing:
+
+```
+npm install node-transmute
+```
+
+## How to use transmute
 
 First load the transmute module and define a transmuter function.
 
