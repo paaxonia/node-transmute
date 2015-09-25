@@ -32,15 +32,17 @@ describe('Transmute', function () {
 
   describe('one', function () {
 
-    it('should transmute one item', function () {
-      transmute.one(person1, transmuter, function (err, person) {
-        expect(person).to.have.all.keys(['id', 'name', 'location']);
+    it('should transmute one item', function (done) {
+      transmute.one(person1, transmuter, function (err, result) {
+        expect(result).to.have.all.keys(['id', 'name', 'location']);
+        done();
       });
     });
 
-    it('should throw an error if transmuter is not a function', function () {
-      transmute.one(person1, undefined, function (err, person) {
+    it('should throw an error if transmuter is not a function', function (done) {
+      transmute.one(person1, undefined, function (err, result) {
         expect(err).to.exist.and.be.instanceof(Error);
+        done();
       });
     });
   });
@@ -52,15 +54,17 @@ describe('Transmute', function () {
       persons = [person1, person2];
     });
 
-    it('should transmute a collection of item', function () {
-      transmute.collection(persons, transmuter, function (err, persons) {
-        expect(persons.length).to.eql(2);
+    it('should transmute a collection of items', function (done) {
+      transmute.collection(persons, transmuter, function (err, result) {
+        expect(result.length).to.eql(2);
+        done();
       });
     });
 
-    it('should throw an error if transmuter is not a function', function () {
-      transmute.collection(persons, undefined, function (err, person) {
+    it('should throw an error if transmuter is not a function', function (done) {
+      transmute.collection(persons, undefined, function (err, result) {
         expect(err).to.exist.and.be.instanceof(Error);
+        done();
       });
     });
   });

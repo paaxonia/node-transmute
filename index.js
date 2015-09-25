@@ -52,11 +52,12 @@ function Transmute() {
       return callback(new Error('The transmuter parameter must be a function.'), null);
     }
 
-    async.each(collection, function (item) {
+    async.eachSeries(collection, function each(item, callback) {
       result.push(transmuter(item));
+      callback();
+    }, function done(err) {
+      callback(err, result);
     });
-
-    callback(null, result);
 	};
 };
 
