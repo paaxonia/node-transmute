@@ -59,7 +59,7 @@ describe('Transmute', function () {
     });
 
     it('should throw an error if transmuter is not a function', function () {
-      transmute.one(persons, undefined, function (err, person) {
+      transmute.collection(persons, undefined, function (err, person) {
         expect(err).to.exist.and.be.instanceof(Error);
       });
     });
