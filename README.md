@@ -1,6 +1,7 @@
 # Transmute
 
 [![Build Status](https://travis-ci.org/paaxonia/node-transmute.svg?branch=master)](https://travis-ci.org/paaxonia/node-transmute)
+[![Coverage Status](https://coveralls.io/repos/paaxonia/node-transmute/badge.svg?branch=master&service=github)](https://coveralls.io/github/paaxonia/node-transmute?branch=master)
 
 A simple library to transmute data into new forms.
 
