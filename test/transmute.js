@@ -13,7 +13,7 @@ describe('Transmute', function () {
     };
 
     person2 = {
-      id: 1,
+      id: 2,
       firstname: 'Jane',
       lastname: 'Doe',
       city: 'Los Angeles'
