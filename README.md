@@ -1,5 +1,7 @@
 # Transmute
 
+[![Build Status](https://travis-ci.org/paaxonia/node-transmute.svg?branch=master)](https://travis-ci.org/paaxonia/node-transmute)
+
 A simple library to transmute data into new forms.
 
 - Transmutes single items.
