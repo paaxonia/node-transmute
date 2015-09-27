@@ -19,14 +19,16 @@ describe('Transmute', function () {
       city: 'Los Angeles'
     };
 
-    transmuter = function(person) {
-      return {
+    transmuter = function(person, callback) {
+      var transmuted = {
         id: person.id,
         name: person.firstname + ' ' + person.lastname,
         location: {
           city: person.city
         }
       };
+
+      callback(null, transmuted);
     };
   });
 

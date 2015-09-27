@@ -33,9 +33,7 @@ function Transmute() {
       return callback(new Error('The transmuter parameter must be a function.'), null);
     }
 
-    var result = transmuter(item);
-
-    callback(null, result);
+    transmuter(item, callback);
 	};
 
   /**
@@ -46,17 +44,19 @@ function Transmute() {
    * @param {function} callback
    */
 	this.collection = function (collection, transmuter, callback) {
-    var result = [];
+    var results = [];
 
     if (!isFunction(transmuter)) {
       return callback(new Error('The transmuter parameter must be a function.'), null);
     }
 
     async.eachSeries(collection, function each(item, callback) {
-      result.push(transmuter(item));
-      callback();
+      transmuter(item, function (err, result) {
+        results.push(result);
+        callback();
+      });
     }, function done(err) {
-      callback(err, result);
+      callback(err, results);
     });
 	};
 };

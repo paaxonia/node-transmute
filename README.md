@@ -23,14 +23,16 @@ First load the transmute module and define a transmuter function.
 ```javascript
   var transmute = require('node-transmute');
 
-  function personTransmuter(person) {
-    return {
+  function personTransmuter(person, callback) {
+    var transmuted = {
       id: person.id,
       name: person.firstname + ' ' + person.lastname,
       location: {
         city: person.city
       }
     };
+    
+    callback(null, transmuted);
   }
 ```
 
